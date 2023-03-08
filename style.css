@@ -1,0 +1,7 @@
+#coinsTableBody img{
+    width: 18px;
+}
+
+#coinsTableBody tr{
+    cursor: pointer;
+}
