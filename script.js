@@ -1,8 +1,8 @@
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '92cafd2032msh75252a91a66893ap1128bdjsn75fcdc8c70ba',
-		'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com'
+		'X-RapidAPI-Key': 'ENV',
+		'X-RapidAPI-Host': 'ENV'
 	}
 };
 
@@ -16,7 +16,7 @@ function createCoinsTable(data){
     data.forEach(element => {
         let priceFormatted = parseFloat(element.price).toLocaleString("en-US", {style:"currency", currency:"USD"});
         let marketCapFormatted = parseInt(element.marketCap).toLocaleString("en-US", {style:"currency", currency:"USD"});
-       
+
         coinsTableBodyElement.innerHTML += `
         <tr onclick="displayCoinDetails(this)" id=${element.uuid}>
             <td>${element.rank}</td>
